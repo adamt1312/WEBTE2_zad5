@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!doctype html>
 <html lang="sk">
 <head>
@@ -67,22 +71,31 @@
     if(typeof(EventSource) !== "undefined") {
         let source = new EventSource("https://wt156.fei.stuba.sk/sse/sse.php");
         source.addEventListener("event", (e) => {
+            let y3;
+            let y2;
+            let y1;
             let data = JSON.parse(e.data);
             console.log(data);
             if (data.sinuss == null) {
-                var y1 = null;
+                y1 = null;
             }
-            else { var y1 = parseFloat(data.sinuss); }
+            else {
+                y1 = parseFloat(data.sinuss);
+            }
 
             if (data.cosinuss == null) {
-                var y2 = null;
+                y2 = null;
             }
-            else { var y2 = parseFloat(data.cosinuss); }
+            else {
+                y2 = parseFloat(data.cosinuss);
+            }
 
             if (data.sinuscos == null) {
-                var y3 = null;
+                y3 = null;
             }
-            else { var y3 = parseFloat(data.sinuscos); }
+            else {
+                y3 = parseFloat(data.sinuscos);
+            }
 
             document.getElementById('sinResult').innerHTML = y1;
             document.getElementById('cosResult').innerHTML = y2;

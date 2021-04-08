@@ -1,5 +1,4 @@
 <?php
-
 header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 
@@ -21,7 +20,7 @@ $array = explode(",",$fileStr);
 
 $index = 0;
 while(true) {
-    // open file then -> to array
+    // open file, then -> to array
     $fileStr = file_get_contents("./file.txt");
     $array = explode(",",$fileStr);
 
@@ -31,7 +30,7 @@ while(true) {
     $cos = cos($index * $a) * cos($index * $a);
     $sincos = sin($index * $a) * cos($index * $a);
 
-    // getting show/hide form file
+    // getting show/hide from file
     $showSin = $array[1];
     $showCos = $array[2];
     $showSincos = $array[3];
