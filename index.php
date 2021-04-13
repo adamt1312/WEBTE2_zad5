@@ -38,8 +38,8 @@
             </div>
         </div>
         <div class="input_wrapper">
-            <input class="form-control" type="text" placeholder="Type constant 'a' here" aria-label="default input example" name="var_a">
-            <button type="submit" class="btn btn-primary"><b>POST</b></button>
+            <input class="form-control" type="number" placeholder="Type constant 'a' here" aria-label="default input example" name="var_a">
+            <button type="submit" class="btn btn-primary"><b>SUBMIT</b></button>
         </div>
     </form>
     <div class="results_wrapper" id="result">
